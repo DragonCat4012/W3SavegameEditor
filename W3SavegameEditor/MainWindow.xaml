@@ -73,7 +73,7 @@
             </TabItem>-->
             <TabItem Header="Variables">
                 <Grid>
-                    <DataGrid Margin="10,10,10,10" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" AutoGenerateColumns="False" ItemsSource="{Binding Data.Variables}">
+                    <DataGrid Margin="10,10,10,10" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" AutoGenerateColumns="False" ItemsSource="{Binding Data.Variables}" ScrollViewer.CanContentScroll="False">
                         <DataGrid.Columns>
                             <DataGridTextColumn Binding="{Binding Index, Mode=OneWay}"  Header="Index"/>
                             <DataGridTextColumn Binding="{Binding Name, Mode=OneWay}"  Header="Name"/>
@@ -84,7 +84,7 @@
                         </DataGrid.Columns>
                         <DataGrid.RowDetailsTemplate>
                             <DataTemplate>
-                                <DataGrid AutoGenerateColumns="False" ItemsSource="{Binding Children}"  EnableRowVirtualization="True" VirtualizingStackPanel.VirtualizationMode="Recycling">
+                                <DataGrid AutoGenerateColumns="False" ItemsSource="{Binding Children}"  EnableRowVirtualization="True" VirtualizingStackPanel.VirtualizationMode="Recycling" ScrollViewer.CanContentScroll="True">
                                     <DataGrid.Columns>
                                         <DataGridTextColumn Binding="{Binding Index, Mode=OneWay}"  Header="Index"/>
                                         <DataGridTextColumn Binding="{Binding Name, Mode=OneWay}"  Header="Name"/>
